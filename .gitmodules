@@ -1,0 +1,3 @@
+[submodule "RasDial/spdlog"]
+	path = RasDial/spdlog
+	url = https://github.com/gabime/spdlog.git

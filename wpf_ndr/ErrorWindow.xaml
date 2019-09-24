@@ -1,0 +1,48 @@
+﻿<Window x:Class="wpf_ndr.ErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_ndr"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="Transparent"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="ErrorWindow" Height="250" Width="400">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" />
+    </WindowChrome.WindowChrome>
+    <Grid Background="#c83d3d3d" Name="Main" Localization.Comments="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="20" Foreground="#FFF3F3F3" Grid.Row="0" Margin="17,14,331,2">提示</Label>
+        <Label FontSize="12" Foreground="#FFF3F3F3" Grid.Row="0" Margin="63,21,267,5" Grid.RowSpan="2">/  Tip</Label>
+        <Rectangle Width="400" Height="1" Grid.Row="1" Fill="Gray" ></Rectangle>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Width="60" Height="60" Source="Resources/icon_error.png"></Image>
+            <TextBlock Name="context" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Margin="0,30">未知错误 （Error：1234）</TextBlock>
+
+        </Grid>
+
+        <Button Width="200" Grid.Row="3" Click="Ok_Button_Click">确定</Button>
+    </Grid>
+</Window>

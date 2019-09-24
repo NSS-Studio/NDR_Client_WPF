@@ -1,0 +1,28 @@
+﻿<Window x:Class="wpf_ndr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lib="clr-namespace:ControlLibrary;assembly=ControlLibrary"
+        xmlns:local="clr-namespace:wpf_ndr"
+        Title="MainWindow" 
+        Height="300" Width="450"
+        ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="Transparent"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Closing="Window_Closing"
+        WindowStartupLocation="CenterScreen">
+    <!--login window width:450 heigh:300-->
+    <!--main  window width:900 heigh:-->
+        <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-2" />
+    </WindowChrome.WindowChrome>
+
+    <Canvas Name="canvas" Margin="0,0,0,0">
+        <lib:Login Name="login_panel" Margin="0,0,0,0" VerticalAlignment="Top" Height="300" Width="450"/>
+    </Canvas>
+</Window>

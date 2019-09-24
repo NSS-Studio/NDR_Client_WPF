@@ -1,0 +1,187 @@
+﻿<UserControl x:Class="ControlLibrary.MainWin"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:local="clr-namespace:ControlLibrary"
+            mc:Ignorable="d"
+            d:DesignHeight="700" d:DesignWidth="900">
+    <Grid Background="#c8323232" Name="Main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#a0787878" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="620"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="24" FontFamily="Comic Sans MS" HorizontalAlignment="Center" VerticalAlignment="Center" >N-Client</Label>
+            <ListBox Grid.Row="1">
+<<<<<<< HEAD
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="主页" Selected="ListBoxItem_Selected_Main"/>
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="设置" Selected="ListBoxItem_Selected_Option"/>
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="关于" Selected="ListBoxItem_Selected_About"/>
+=======
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="主页" MouseLeftButtonDown="ListBoxItem_MouseLeftButtonDown"/>
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="设置" Selected="ListBoxItem_Selected"/>
+                <ListBoxItem HorizontalContentAlignment="Center"  Height="50" FontSize="16" Content="关于"/>
+
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+            </ListBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+<<<<<<< HEAD
+            <!--PLANE_B-->
+            <Grid Grid.Column="1" Name="optionPanel" Opacity="0">
+=======
+
+            <!--PLANE_C-->
+            <Grid Grid.Column="1" Name="aboutPlane" Opacity="1">
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="80*" />
+                </Grid.RowDefinitions>
+<<<<<<< HEAD
+                <Label FontSize="20" Foreground="#FFF3F3F3" Grid.Row="0" Margin="18,14,530,2" Grid.RowSpan="2">设置</Label>
+                <Label FontSize="10" Foreground="#FFF3F3F3" Grid.Row="0" Margin="69,23,77,639" Grid.RowSpan="3">/  Option</Label>
+                <Rectangle Width="700" Height="1"  Grid.Row="1" Fill="Gray" ></Rectangle>
+                <StackPanel Orientation="Vertical" Grid.Row="2" Margin="18,25,25,487">
+                    <Label Foreground="Gray">基本设置</Label>
+                    <CheckBox  Content="关闭直接退出而不最小化到托盘" Foreground="#FFF3F3F3" Margin="0,5,0,5"  HorizontalAlignment="Left"  VerticalAlignment="Top" Height="18" Width="153"/>
+                    <CheckBox  Content="自动关闭通知窗口" Foreground="#FFF3F3F3" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="153"/>
+                    <CheckBox  Content="禁止启动时唤醒导航页面" Foreground="#FFF3F3F3" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="161"/>
+                    <CheckBox  Content="随系统启动" Foreground="#FFF3F3F3" Margin="0,0,0,5" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="18" Width="153"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Row="2" Margin="18,162,25,344">
+                    <Label Foreground="Gray" Content="登陆设置"/>
+                    <CheckBox  Content="断线自动重连" Foreground="#FFF3F3F3" Margin="0,5,0,5"  HorizontalAlignment="Left"  VerticalAlignment="Top" Height="18" Width="153"/>
+                    <CheckBox  Content="拨号完毕隐藏主界面" Foreground="#FFF3F3F3" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="153"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>注销热键 ：</Label>
+                        <ComboBox Width="130" VerticalAlignment="Stretch">
+=======
+                <Label FontSize="20" Foreground="#FFF3F3F3" Grid.Row="0" Margin="18,14,530,2" Grid.RowSpan="2">关于</Label>
+                <Label FontSize="10" Foreground="#FFF3F3F3" Grid.Row="0" Margin="69,23,77,639" Grid.RowSpan="3">/  About</Label>
+                <Rectangle Width="700" Height="1" Grid.Row="1" Fill="Gray" ></Rectangle>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Margin="97,62,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="533" Width="407" Foreground="#FFECECEC"><Run Text="未经允许，"/><LineBreak/><Run Text="禁止对软件（包括主程序、依赖库）"/><LineBreak/><Run Text="进行非法的逆向工程或二次开发。"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="本软件及其源码受"/><LineBreak/><Run Text="《中华人民共和国著作权法》、"/><LineBreak/><Run Text="《中华人民共和国计算机信息安全保护条例》"/><LineBreak/><Run Text="等法律法规保护。"/><LineBreak/><Run Text="更多详情，请参见最终用户许可协议。"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="本软件使用了 Qt 5 社区版的类库。"/><LineBreak/><Run Text="该部分软件遵守 GNU LGPL 协议。"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="版权 2018 东软网络安全工作室( NSS ). 保留所有权利. "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="开发人员名单"/><LineBreak/><Run Text="xx"/><LineBreak/><Run Text="xxx"/><LineBreak/><Run Text="xxxx"/><LineBreak/><Run Text="xx"/><LineBreak/><Run Text="xxx"/><LineBreak/><Run Text="xxx"/><LineBreak/><Run Text="xx"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="东软教学支持与实验中心 监制"/></TextBlock>
+            </Grid>
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Row="2" Margin="18,300,25,212">
+                    <Label Foreground="Gray">基本设置</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>选择语言 ：</Label>
+                        <ComboBox Width="130" VerticalAlignment="Stretch">
+
+<<<<<<< HEAD
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <Button Margin="0,572,25,38" Grid.Row="2" Height="Auto" FontFamily="微软雅黑" HorizontalAlignment="Right" Width="130">应用</Button>
+            </Grid>
+
+            <!--PLANE_C-->
+            <Grid Grid.Column="1" Name="aboutPanel" Opacity="0">
+=======
+            <!--PLANE_B-->
+            <Grid Grid.Column="1" Name="optionPlane" Opacity="0">
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="80*" />
+                </Grid.RowDefinitions>
+                <Label FontSize="20" Foreground="#FFF3F3F3" Grid.Row="0" Margin="18,14,530,2" Grid.RowSpan="2">关于</Label>
+                <Label FontSize="10" Foreground="#FFF3F3F3" Grid.Row="0" Margin="69,23,77,639" Grid.RowSpan="3">/  About</Label>
+                <Rectangle Width="700" Height="1" Grid.Row="1" Fill="Gray" ></Rectangle>
+
+<<<<<<< HEAD
+=======
+                <Button Width="100" Height="35"  FontSize="11" Grid.Row="2" HorizontalAlignment="Center" Margin="49,556,454,52">访问官网</Button>
+                <Button Width="100" Height="35"  FontSize="11" Grid.Row="2" HorizontalAlignment="Center" Margin="250,556,253,52">重置WinSock</Button>
+                <Button Width="100" Height="35"  FontSize="11" Grid.Row="2" HorizontalAlignment="Center" Margin="448,556,55,52">清除所有信息</Button>
+            </Grid>
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+
+                <StackPanel Grid.Row="2">
+                    <Image Source="Resources\bgs.jpg" Margin="0,10,0,10" Height="194"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="20" Content="[ NDR 东软校园网络认证客户端 ]"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Foreground="LightGray" Content="东软网络安全工作室(NSS)开发"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Foreground="LightGray" Content="东软教学支持与实验中心 监制"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Foreground="LightGray" Content="构建于 Autum 18 2019 版本0.80"/>
+                    <Label HorizontalContentAlignment="Center" FontSize="15" Margin="0,20,0,0" Foreground="Gray" Content="法律声明"/>
+                    <Grid Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1"/>
+                        <TextBlock Grid.Column="1"  TextWrapping="Wrap" FontSize="15" Foreground="LightGray" Margin="24,10,24,0"><Run Text="        未经允许，禁止对软件（包括主程序、依赖库）进行非法的逆向工程或二次开发。本软件及其源码受《中华人民共和国著作权法》、《中华人民共和国计算机信息安全保护条例》等法律法规保护。更多详情，请参见最终用户许可协议。"/><LineBreak/><Run/></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <Button Margin="46,520,317,92" Name="NSS"  Click="NSS_Click" FontFamily="微软雅黑" Grid.Row="2">导航</Button>
+                <Button Margin="322,520,41,92" Name="home" Click="Home_Click" FontFamily="微软雅黑" Grid.Row="2">主页</Button>
+                <Label HorizontalContentAlignment="Center" Grid.Row="2" Foreground="Gray" Content="版权2019东软网络安全工作室(NSS).保留所有权利" Margin="0,589,10,24"/>
+            </Grid>
+            
+            <!--PLANE_A-->
+<<<<<<< HEAD
+            <Grid Grid.Column="1" Name="mainPanel" Opacity="1">
+=======
+            <Grid Grid.Column="1" Name="mainPlane" Opacity="0">
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Width="70" Height="70" Grid.Column="0" Source="Resources/User_head.png"></Image>
+                    <Label Name="label_username" Grid.Column="1" Margin="0 25 0 0" FontFamily="Comic Sans MS" FontSize="20">Hi, Wenner</Label>
+                    <Label Grid.Column="1" Margin="0 63 0 0">网络已连接</Label>
+                    <Image Name="img_logout" MouseEnter="Logout_MouseEnter" MouseLeftButtonDown="Logout_MouseLeftButtonDown" Grid.Column="2" Source="Resources/Log_out.png" Width="40" Height="40"></Image>
+                </Grid>
+                <Rectangle Grid.Row="1" Width="700" Height="1" Fill="Gray" ></Rectangle>
+                <Image Grid.Row="2" Source="Resources/nettype.png" Margin="19,1,548,10" Grid.RowSpan="2"/>
+                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"  FontFamily="Comic Sans MS"  Grid.Row="2" Margin="55,0,471,0">套餐</Label>
+                <Label Name="label_nettype" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"  FontFamily="Comic Sans MS"  Grid.Row="2" Margin="137,0,119,10" Height="52" Grid.RowSpan="2">联通50M - CUCC套餐</Label>
+                <Button Width="100" Height="35"  Margin="493,9,10,7"  FontSize="11" HorizontalAlignment="Center" Click="Button_Click" Grid.Row="2">网络套餐管理</Button>
+                <Rectangle Grid.Row="3" Width="700" Height="1" Fill="Gray" ></Rectangle>
+<<<<<<< HEAD
+
+                <Label Name="label_netflow" FontSize="10" Margin="374,64,10,211" Grid.Row="4" RenderTransformOrigin="0.489,0.528">上网流量 : 3012.1MB</Label>
+                <Label Name="label_nettime" FontSize="10" Margin="374,33,10,242" Grid.Row="4">上网时长 : 06:32:12</Label>
+                <Label Name="label_netIP"  FontSize="10" Margin="55,33,343,242" Grid.Row="4">登陆IP : 172.233.233.233</Label>
+                <Label Name="label_netlocation" FontSize="10" Margin="55,64,343,211" Grid.Row="4">登陆地点 : 建设中...</Label>
+                <Rectangle Grid.Row="4" Height="1" Fill="Gray" Margin="0,118,0,181" />
+                <Image  Grid.Row="4" Source="Resources/bgs.jpg" Margin="0,83,0,-83"></Image>
+=======
+                <StackPanel Grid.Row="4">
+                    <Image MaxHeight="180" Margin="0 20 0 10" Width="540" Stretch="Fill" Source="C:\Users\Alphakin\Pictures\3.jpg"></Image>
+                    <TextBlock Width="540" TextWrapping="Wrap" FontSize="13" Text="         功能开发中，敬请期待…………"></TextBlock>
+                </StackPanel>
+>>>>>>> 871f365e95ef79ad5b6b3e720955bf7eb072585a
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
